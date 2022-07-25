@@ -5,6 +5,7 @@ import Signin from "../components/Signin";
 import Tasks from "../components/Tasks/Tasks";
 import Signup from "../components/Signup";
 import Signout from "../components/Signout";
+import Referral from "./contexts/Referral";
 
 const RoutersInfo = () => {
   return (
@@ -15,6 +16,15 @@ const RoutersInfo = () => {
         element={
           <RequireAuth>
             <Tasks />
+          </RequireAuth>
+        }
+      />
+      <Route
+        exact
+        path="/referral"
+        element={
+          <RequireAuth>
+            <Referral />
           </RequireAuth>
         }
       />
