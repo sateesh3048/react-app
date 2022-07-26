@@ -23,8 +23,8 @@ const Referral = () => {
       const res = await sendInvitation(email, token);
       await showResp(res);
     } catch (err) {
+      console.log("Something went wrong!");
       console.log(err);
-      console.log("Unable to login");
     }
 
     // setEmail("");

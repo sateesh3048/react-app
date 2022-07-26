@@ -11,26 +11,37 @@ const NavBar = () => {
 
   return (
     <Row>
-      <Navbar bg="light" expand="lg">
-        {curUser ? (
-          <Nav>
-            <Nav.Item>
-              <Link to="/">Tasks</Link>
-            </Nav.Item>
-            <Nav.Item>
-              <Link to="/referral">Referral </Link>
-            </Nav.Item>
-            <Nav.Item>
-              <Link to="/logout">logout</Link>
-            </Nav.Item>
-          </Nav>
-        ) : (
-          <Nav className="me-auto">
-            <Link to="/login">Login</Link>
-            <Link to="/signup">Register</Link>{" "}
-          </Nav>
-        )}
-      </Navbar>
+      {/* <Navbar bg="light" expand="lg"> */}
+      {curUser ? (
+        <Nav activeKey="/">
+          <Nav.Item>
+            <Nav.Link as={Link} to="/">
+              Tasks
+            </Nav.Link>
+          </Nav.Item>
+          <Nav.Item>
+            <Nav.Link as={Link} to="/referral">
+              Referral
+            </Nav.Link>
+            {/* <Link to="/referral">Referral </Link> */}
+          </Nav.Item>
+          <Nav.Item>
+            <Nav.Link as={Link} to="/logout">
+              Logout
+            </Nav.Link>
+          </Nav.Item>
+        </Nav>
+      ) : (
+        <Nav className="me-auto">
+          <Nav.Link as={Link} to="/login">
+            Login
+          </Nav.Link>
+          <Nav.Link as={Link} to="/signup">
+            Register
+          </Nav.Link>
+        </Nav>
+      )}
+      {/* </Navbar> */}
     </Row>
   );
 };
