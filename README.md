@@ -2,6 +2,53 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+1) Please start this project with  below command
+
+npm start 
+
+## Application Flow
+
+1) User can register by using registration screen
+
+![](/screenshots/registration_page.png)
+
+2) Users can login to the site by using login page.
+
+![](/screenshots/login_page.png)
+
+3) Users can see the tasks list which they have created.
+
+![](/screenshots/tasks_list.png)
+
+
+4) Users can add their own tasks by clicking Add task button
+
+![](/screenshots/add_task.png)
+
+
+5) Users can delete tasks by clicking delete icon.
+
+![](/screenshots/delete_task.png)
+
+
+6) Users can invite their friends to the site by using referral screen.
+
+![](/screenshots/invite_user.png)
+
+7) Users can see inviation sent message once invitation sent.
+
+![](/screenshots/email_invitaton_success_msg.png)
+
+
+8) Users can view invalid email alert if they are entering wrong email.
+
+![](/screenshots/email_alert.png)
+
+9) We are sending invitation email to the user. 
+
+![](/screenshots/email_sent.png)
+
+
 ## Available Scripts
 
 In the project directory, you can run:
