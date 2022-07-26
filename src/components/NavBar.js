@@ -41,7 +41,6 @@ const NavBar = () => {
           </Nav.Link>
         </Nav>
       )}
-      {/* </Navbar> */}
     </Row>
   );
 };

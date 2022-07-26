@@ -12,6 +12,7 @@ const Referral = () => {
   const [variant, setVariant] = useState("");
   const [msg, setMsg] = useState("");
   const [err, setErr] = useState("");
+
   async function sendInvite(event) {
     event.preventDefault();
     if (!email) return;
@@ -50,17 +51,23 @@ const Referral = () => {
         {err && <h2 style={{ color: "red" }}>{err}</h2>}
       </Row>
       <Row>
-        <form onSubmit={sendInvite}>
-          <Row>
-            <input
-              type="text"
+        <Form onSubmit={sendInvite}>
+          <Form.Group className="mb-3" controlId="formBasicEmail">
+            <Form.Label>Email address</Form.Label>
+            <Form.Control
+              type="email"
               placeholder="Enter email for sending invitation"
               onChange={(e) => setEmail(e.target.value)}
               value={email}
             />
-          </Row>
-          <input type="submit" value="Invite" />
-        </form>
+            <Form.Text className="text-muted">
+              Please enter email for inviting your friend to site.
+            </Form.Text>
+          </Form.Group>
+          <Button variant="primary" type="submit">
+            Invite your friend
+          </Button>
+        </Form>
       </Row>
     </>
   );
