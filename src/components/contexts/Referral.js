@@ -28,7 +28,7 @@ const Referral = () => {
       console.log(err);
     }
 
-    // setEmail("");
+    setEmail("");
   }
 
   function isValidEmail(email) {
