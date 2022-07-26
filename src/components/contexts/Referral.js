@@ -15,7 +15,10 @@ const Referral = () => {
   async function sendInvite(event) {
     event.preventDefault();
     if (!email) return;
-    console.log(email);
+    if (!isValidEmail(email)) {
+      setErr("Email is invalid");
+      return;
+    }
     try {
       const res = await sendInvitation(email, token);
       await showResp(res);
@@ -25,6 +28,10 @@ const Referral = () => {
     }
 
     // setEmail("");
+  }
+
+  function isValidEmail(email) {
+    return /\S+@\S+\.\S+/.test(email);
   }
 
   function showResp(resp) {
@@ -40,6 +47,7 @@ const Referral = () => {
     <>
       <Row>
         <Alert variant={variant}>{msg}</Alert>
+        {err && <h2 style={{ color: "red" }}>{err}</h2>}
       </Row>
       <Row>
         <form onSubmit={sendInvite}>
